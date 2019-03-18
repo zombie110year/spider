@@ -1,0 +1,25 @@
+
+### 请求图片地址列表, 响应为一个 json
+GET /activity/web/view/data/31 HTTP/1.1
+Host: www.bilibili.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0
+Accept: image/webp,*/*
+Accept-Language: zh,en-US;q=0.5
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Referer: https://www.bilibili.com/video/av
+
+### 请求一个图片
+GET /bfs/activity-plat/cover/20171215/o6y3r7or6z.png HTTP/1.1
+Host: i0.hdslb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh,en-US;q=0.5
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Cookie: BL_D_PROV=undefined; BL_T_PROV=undefined
+Upgrade-Insecure-Requests: 1
+If-Modified-Since: Fri, 15 Dec 2017 11:21:05 GMT
+Cache-Control: max-age=0
