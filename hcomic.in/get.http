@@ -1,0 +1,10 @@
+GET https://c.mipcdn.com/i/s/https://cn.comicstatic.xyz/img/cn/1387329/19.jpg HTTP/2.0
+Host: c.mipcdn.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh,en-US;q=0.5
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Cookie: BL_D_PROV=undefined; BL_T_PROV=undefined; mip_performance_stats_level1=1
+Upgrade-Insecure-Requests: 1
