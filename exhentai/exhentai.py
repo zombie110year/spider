@@ -3,12 +3,16 @@
 使用方法:
 
 1. 获取当前在 exhentai 登录的账户使用的 cookie（使用纯文本格式，形如: `ipb_member_id=4*****2; ipb_pass_hash=*********************; igneous=df******; sk=; yay=0`
+
+    可以在开发者工具的 Console 栏中执行 `document.cookie` 语句得到 cookie 的纯文本格式.
+
 2. 复制漫画第一页的 url， 形如 `https://exhentai.org/s/**********/********-1`
 
 3. 在命令行中输入以下命令执行::
 
-    python exhentai.py <url> <cookie>
-    # 由于 cookie 中含有空格，因此可能需要添加引号
+    python exhentai.py <url>
+
+cookie 将从当前工作目录下的 cookie.txt 文件中读取.
 """
 from pathlib import Path, PurePath
 from sys import argv
@@ -82,9 +86,9 @@ def download_img(img_url: str, directory: str):
         file.write(response.content)
 
 
-def main(url, cookie, header=EH_HEADER):
+def main(url, header=EH_HEADER):
+    cookie = Path("cookie.txt").read_text(encoding="utf-8")
     session = init_session(header, url, cookie)
-
     last_url = url
 
     html = fetch_source(session, url)
@@ -115,4 +119,4 @@ def main(url, cookie, header=EH_HEADER):
 
 
 if __name__ == "__main__":
-    main(argv[1], argv[2])
+    main(argv[1])
