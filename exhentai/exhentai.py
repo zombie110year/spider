@@ -87,7 +87,7 @@ def download_img(img_url: str, directory: str):
 
 
 def main(url, header=EH_HEADER):
-    cookie = Path("cookie.txt").read_text(encoding="utf-8")
+    cookie = Path("cookie.txt").read_text().strip()
     session = init_session(header, url, cookie)
     last_url = url
 
